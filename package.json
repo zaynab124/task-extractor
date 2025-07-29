@@ -1,17 +1,25 @@
 {
-  "name": "task-extractor",
+  "name": "chattasker",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A project to handle Telegram and WhatsApp webhooks and message storage",
+  "main": "src/telegram_api.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:telegram": "node src/telegram_api.js",
+    "start:whatsapp": "node src/whatsapp_api.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "dotenv": "^17.2.0",
-    "express": "^5.1.0",
-    "node-telegram-bot-api": "^0.66.0"
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
+    "openai": "^5.10.2",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "jest": "^30.0.4"
   }
 }
